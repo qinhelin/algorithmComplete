@@ -38,4 +38,18 @@ public class StringSolverTest extends AbstractTest{
 		}
 		info("Test length of longest substring succeed.");
 	}
+	
+	@Test
+	public void testLongestPalindrome() {
+		String[] testCases = {"","a","aaa","abcbdesea"};
+		String[] results = {"","a","aaa","bcb"};
+		for(int i=0;i<testCases.length;i++){
+			String str = testCases[i];
+			String subStr = solver.longestPalindrome(str);
+			if(!subStr.equals(results[i])){
+				fail("The runnting result is "+ subStr +" [expected result: "+results[i]+"]");
+			}
+		}
+		info("Test length of longest palindrome succeed.");
+	}
 }
